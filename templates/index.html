@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaflet.RouteAnimate</title>
+    <meta charset="utf-8" />
+    <!-- 引入leafletapi -->
+    <link rel="stylesheet" href="/leaflet/leaflet.css" />
+    <script src="/leaflet/leaflet.js"></script>
+
+    <!-- 引入插件 -->
+    <script src="/leaflet/leaflet.polylineDecorator.js"></script>
+    <script src="/leaflet/Leaflet.AnimatedMarker.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .map {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            left: 0;
+        }
+
+        .menuBar {
+            position: relative;
+            text-align: center;
+            top: 10px;
+            margin: 0 50px;
+            padding: 5px;
+            border-radius: 3px;
+            z-index: 999;
+            color: #ffffff;
+            /*background-color: rgba(0, 168, 0, 1);*/
+        }
+
+        .formBlock {
+            max-width: 300px;
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            position: absolute;
+            top: 10px;
+            left: 65px;
+            padding: 10px;
+            z-index: 999;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .input {
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #ddd;
+            font-size: 15px;
+            border-radius: 3px;
+        }
+
+        #form {
+            padding: 0;
+            margin: 0;
+        }
+
+        input:nth-child(1) {
+            margin-bottom: 10px;
+        }
+
+        .KNNForm {
+            max-width: 300px;
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            position: absolute;
+            top: 150px;
+            left: 65px;
+            padding: 10px;
+            z-index: 999;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+            border-radius: 5px;
+            width: 100%;
+        }
+        img.huechange { filter: hue-rotate(120deg); }
+
+    </style>
+</head>
+
+<body>
+    <div class="map" id="map"></div>
+    <div class="menuBar">
+        <input type="button" value="Start" onclick="startClick()" />
+        <input type="button" value="Pause" onclick="pauseClick()" />
+        <input type="button" value="SpeedUp" onclick="speetUp()" />
+        <input type="button" value="SlowDown" onclick="speetDown()" />
+        <input type="button" value="Stop" onclick="stopClick()" />
+    </div>
+
+    <div class="formBlock" >
+            <form id="form" action="/SPquery/" method="get">
+                <input type="text" name="start" class="input" id="start" placeholder="Choose starting point" />
+                <input type="text" name="end" class="input" id="destination" placeholder="Choose ending point" />
+                <!--<button style="display: none;" type="submit">Get Directions</button>-->
+
+                <button type="submit">SP query</button>
+            </form>
+    </div>
+
+   <!--<p style="color:black;position: absolute; z-index: 1000; margin-top: 100px">start{{ start }}, destination{{ destination }},
+        route{{ route }}, distance{{ distance }}.</p>-->
+    <div class="KNNForm" >
+        <form id="KNNForm" action="/KNNquery/" method="post" >
+            {% csrf_token %}
+            <input id="KNNlocation" type="text" name="KNNlocation" value="Current location"/>
+            <select name="POIs" >
+                <option id="POIs" value="cinemas">Cinemas</option>
+                <option id="POIs" value="restaurant">Restaurants</option>
+            </select>
+            <select name="kvalue" >
+                <option id="kvalue" value="5">Top-5</option>
+                <option id="kvalue" value="6">Top-6</option>
+                <option id="kvalue" value="7">Top-7</option>
+                <option id="kvalue" value="8">Top-8</option>
+                <option id="kvalue" value="9">Top-9</option>
+                <option id="kvalue" value="10">Top-10</option>
+            </select>
+             <input id="hiddenflag" type="text" name="hiddenflag" value="Current location" style="display:none"/>
+            <button type="submit">KNN query</button>
+        </form>
+    </div>
+   <!-- <p style="color:black;position: absolute; z-index: 1000; margin-top: 100px">knnposition {{ knnlocation }}，pois_indices{{ pois_indices }},pois_distances{{ pois_distances }}</p>-->
+</body>
+
+<script>
+   // import markerIcon from '/leaflet/images/marker-icon.png'
+   // import markerIcon2x from '/leaflet/images/marker-icon-2x.png'
+   // import markerShadow from '/leaflet/images/marker-shadow.png'
+    // 初始化地图
+    //alert('1');
+    var map = L.map('map', {
+        center: [22.3332706, 114.2630591],
+        zoom: 14,
+        preferCanvas: true // 使用canvas模式渲染矢量图形
+    });
+    // 添加底图
+    var tiles = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+    //alert('2');
+    //map.locate({setView: true, watch: true});
+
+
+
+    var latlngs = JSON.parse('{{ route | safe }}');
+    //alert(latlngs)
+    var speedList = [1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 4, 4, 4, 3, 2, 2, 1, 1, 1];
+    // 轨迹线
+    var routeLine = L.polyline(latlngs, {
+        weight: 5
+    }).addTo(map);
+    // 实时轨迹线
+    var realRouteLine = L.polyline([], {
+        weight: 7,
+        color: '#FF9900'
+    }).addTo(map);
+    // 轨迹方向箭头
+    var decorator = L.polylineDecorator(routeLine, {
+        patterns: [{
+            repeat: 50,
+            symbol: L.Symbol.arrowHead({
+                pixelSize: 5,
+                headAngle: 75,
+                polygon: false,
+                pathOptions: {
+                    stroke: true,
+                    weight: 2,
+                    color: '#FFFFFF'
+                }
+            })
+        }]
+    }).addTo(map);
+
+    var carIcon = L.icon({
+        iconSize: [37, 26],
+        iconAnchor: [19, 13],
+        iconUrl: '/leaflet/car.png'
+    })
+    //var startIcon = L.icon({
+        //iconUrl: '/leaflet/start.png'
+        //}
+    //)
+    //var marker1 = L.marker(routeLine.getLatLngs()[0], {icon:startIcon}).addTo(map);
+    //var marker1 = L.marker('stop').setView(latlngs[-1],7)
+    // 动态marker
+    var animatedMarker = L.animatedMarker(routeLine.getLatLngs(), {
+        speedList: speedList,
+        interval: 200, // 默认为100mm
+        icon: carIcon,
+        playCall: updateRealLine
+    }).addTo(map)
+    var newLatlngs = [routeLine.getLatLngs()[0]]
+
+    // 绘制已行走轨迹线（橙色那条）
+    function updateRealLine(latlng) {
+        newLatlngs.push(latlng)
+        realRouteLine.setLatLngs(newLatlngs)
+    }
+
+    let speetX = 1 // 默认速度倍数
+    // 加速
+    function speetUp() {
+        speetX = speetX * 2
+        animatedMarker.setSpeetX(speetX);
+    }
+
+    // 减速
+    function speetDown() {
+        speetX = speetX / 2
+        animatedMarker.setSpeetX(speetX);
+    }
+
+    // 开始
+    function startClick() {
+        animatedMarker.start();
+    }
+
+    // 暂停
+    function pauseClick() {
+        animatedMarker.pause();
+    }
+
+    // 停止
+    function stopClick() {
+        newLatlngs = []
+        animatedMarker.stop();
+    }
+</script>
+<script>
+    map.locate({watch: true});
+   /* let DefaultIcon = L.icon({
+    iconUrl: markerIcon,
+    iconRetinaUrl: markerIcon2x,
+    shadowUrl: markerShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    tooltipAnchor: [16, -28],
+    shadowSize: [41, 41]
+});
+    L.Marker.prototype.options.icon = DefaultIcon;*/
+    map.on('locationfound', onLocationFound);
+    //alert('3');
+    var myLocation;
+   function onLocationFound(e) {
+       myLocation = e.latlng // 使用者位置
+       var marker = L.marker(e.latlng).addTo(map);
+       marker._icon.classList.add("huechange");
+　  }
+
+    //alert('4');
+    //document.getElementById("myText").value = myLocation;
+    //document.getElementById("myForm").submit();
+     window.onload = function() {//当文档加载完毕时执行本函数
+            var knnform = document.getElementById("KNNForm");//获取表单元素对象
+            knnform.onsubmit = function() {//给表单元素添加一个监听，监听表单被提交事件
+                var positionValue = knnform.KNNlocation.value;//获取表单中名为username的表单元素值
+                if(positionValue == 'Current location') {//判断该值是否为空
+                    document.getElementById("hiddenflag").value = myLocation;//得到usernmae元素后的<span>元素
+                    return true;//返回false，表示拦截了表单提交动作
+                }
+                return true;//不拦截表单提交动作
+            };
+        };
+   //alert('5');
+    let poislocation = JSON.parse('{{ pois_latlon | safe }}');
+    let poisname = JSON.parse('{{ pois_name | safe }}');
+    //alert(poislocation);
+    //alert(poisname);
+    let poismarkerArr = [];
+    for (var i=0;i<poislocation.length;i++) {
+           let maker = L.marker([poislocation[i][0],poislocation[i][1]]).addTo(map).bindPopup(poisname[i]).openPopup();
+       poismarkerArr.push(maker);
+        }
+
+</script>
+</html>

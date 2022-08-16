@@ -1,0 +1,891 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2022-07-13T06:14:21Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/278953259",
+        "addr:housenumber": "1",
+        "addr:street": "柯士甸道西 Austin Road West",
+        "amenity": "cinema",
+        "name": "圓方戲院 Premiere Elements",
+        "name:en": "Premiere Elements",
+        "name:zh": "圓方戲院",
+        "phone": "2196 8170",
+        "website": "https://cinema.com.hk/en/site/cinemainfo/PREMIERE-ELEMENTS/info",
+        "wikidata": "Q7737472"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1626641,
+          22.3031638
+        ]
+      },
+      "id": "node/278953259"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/289841016",
+        "amenity": "cinema",
+        "name": "AMC Festival Walk",
+        "name:en": "AMC Festival Walk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1741911,
+          22.3379837
+        ]
+      },
+      "id": "node/289841016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/293666120",
+        "amenity": "cinema",
+        "name": "百老匯戲院 - 數碼港 Broadway - Cyberport",
+        "name:en": "Broadway Cyberport",
+        "name:zh": "百老匯戲院 - 數碼港"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.129501,
+          22.2613199
+        ]
+      },
+      "id": "node/293666120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317370203",
+        "amenity": "cinema",
+        "name": "MCL 康怡 Kornhill",
+        "name:en": "MCL Kornhill",
+        "name:zh": "MCL康怡戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2169008,
+          22.2842158
+        ]
+      },
+      "id": "node/317370203"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317370204",
+        "amenity": "cinema",
+        "name": "MOViE MOViE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2172887,
+          22.2856215
+        ]
+      },
+      "id": "node/317370204"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/762015082",
+        "amenity": "cinema",
+        "name": "橙天嘉禾海運戲院 Grand Ocean",
+        "name:en": "Grand Ocean",
+        "name:zh": "橙天嘉禾海運戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1691868,
+          22.295211
+        ]
+      },
+      "id": "node/762015082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1077245870",
+        "addr:housenumber": "6-12",
+        "addr:street": "Sai Yeung Choi Street South",
+        "amenity": "cinema",
+        "name": "百老匯戲院(旺角) Broadway Theatre (Mongkok)",
+        "name:en": "Broadway Theatre (Mongkok)",
+        "name:zh": "百老匯戲院(旺角)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1706529,
+          22.3169598
+        ]
+      },
+      "id": "node/1077245870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1208593655",
+        "addr:district": "荃灣 Tsuen Wan",
+        "addr:housenumber": "18",
+        "addr:street": "楊屋道 Yeung Uk Road",
+        "air_conditioning": "yes",
+        "amenity": "cinema",
+        "name": "英皇戲院 Emperor Cinema",
+        "name:en": "Emperor Cinema",
+        "name:zh": "英皇戲院",
+        "name:zh-Hans": "英皇戏院",
+        "name:zh-Hant": "英皇戲院",
+        "operator": "英皇院線",
+        "wheelchair": "limited",
+        "wikidata": "Q67934947",
+        "wikipedia": "zh:英皇院線"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1149911,
+          22.3677638
+        ]
+      },
+      "id": "node/1208593655"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1561111121",
+        "amenity": "cinema",
+        "name": "葵芳百老匯戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1265593,
+          22.3576418
+        ]
+      },
+      "id": "node/1561111121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1949161549",
+        "amenity": "cinema",
+        "name": "嘉禾黃埔 Goldenharvest Whampoa",
+        "name:en": "Goldenharvest Whampoa",
+        "name:zh": "嘉禾黃埔"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1903322,
+          22.3047069
+        ]
+      },
+      "id": "node/1949161549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1952096341",
+        "amenity": "cinema",
+        "name": "AMC Pacific Place"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1656083,
+          22.2778527
+        ]
+      },
+      "id": "node/1952096341"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1952096342",
+        "amenity": "cinema",
+        "name": "PALACE ifc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1581464,
+          22.2856857
+        ]
+      },
+      "id": "node/1952096342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1956160386",
+        "amenity": "cinema",
+        "name": "寶石戲院 Lux Theatre",
+        "name:en": "Lux Theatre",
+        "name:zh": "寶石戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1861869,
+          22.3064332
+        ]
+      },
+      "id": "node/1956160386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2090579206",
+        "addr:housenumber": "22-36",
+        "addr:street": "百德新街 Paterson Street",
+        "alt_name:zh": "翡翠明珠戲院",
+        "amenity": "cinema",
+        "name": "Cinema City",
+        "name:en": "MCL JP",
+        "name:zh": "MCL JP 銅鑼灣戲院",
+        "phone": "2360 0910",
+        "website": "https://www.cinemacity.com.hk/tc/site/cinemainfo/3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1858079,
+          22.2806842
+        ]
+      },
+      "id": "node/2090579206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2090588088",
+        "amenity": "cinema",
+        "name": "總統戲院 President Theatre",
+        "name:en": "President Theatre",
+        "name:zh": "總統戲院",
+        "wikidata": "Q33408818"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1835025,
+          22.2812926
+        ]
+      },
+      "id": "node/2090588088"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125709387",
+        "addr:housenumber": "21",
+        "addr:street": "North Street",
+        "amenity": "cinema",
+        "branch": "西環 North Street",
+        "name": "Golden Scene Cinema"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1290985,
+          22.2833401
+        ]
+      },
+      "id": "node/3125709387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3296346015",
+        "amenity": "cinema",
+        "name": "百老匯戲院 Broadway Cinema",
+        "name:en": "Broadway Cinema",
+        "name:zh": "百老匯戲院",
+        "website": "https://www.cinema.com.hk/",
+        "wikidata": "Q15909979",
+        "wikipedia": "zh:百老匯院線"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.0032587,
+          22.4568809
+        ]
+      },
+      "id": "node/3296346015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3492622393",
+        "amenity": "cinema",
+        "name": "MCL 新都城戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2575105,
+          22.3243512
+        ]
+      },
+      "id": "node/3492622393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3799542960",
+        "addr:housenumber": "311",
+        "addr:street": "告士打道 Gloucester Road",
+        "amenity": "cinema",
+        "name": "皇室戲院",
+        "name:en": "Grand Windsor Cinema",
+        "operator": "MCL Cinema",
+        "website": "http://www2.mclcinema.com/MCLCinema.aspx?ci=003&visLang=2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1864286,
+          22.2804317
+        ]
+      },
+      "id": "node/3799542960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906193412",
+        "amenity": "cinema",
+        "name": "THE ONE 百老匯戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.172453,
+          22.2997683
+        ]
+      },
+      "id": "node/3906193412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906193413",
+        "amenity": "cinema",
+        "name": "嘉禾港威電影城 Gateway Tower Golden Gateway Multiplex",
+        "name:en": "Gateway Tower Golden Gateway Multiplex",
+        "name:zh": "嘉禾港威電影城"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1679035,
+          22.2993522
+        ]
+      },
+      "id": "node/3906193413"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906193415",
+        "amenity": "cinema",
+        "name": "地下電影銀幕院 Morphic Collective",
+        "name:en": "Morphic Collective",
+        "name:zh": "地下電影銀幕院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1694519,
+          22.3134747
+        ]
+      },
+      "id": "node/3906193415"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906193417",
+        "amenity": "cinema",
+        "name": "Cinema City 朗豪坊戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1685583,
+          22.3184201
+        ]
+      },
+      "id": "node/3906193417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906193418",
+        "amenity": "cinema",
+        "name": "the sky (奧海城)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1618854,
+          22.3157552
+        ]
+      },
+      "id": "node/3906193418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906193420",
+        "amenity": "cinema",
+        "name": "UA Cine Moko"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1723261,
+          22.3233392
+        ]
+      },
+      "id": "node/3906193420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906338107",
+        "amenity": "cinema",
+        "name": "百老匯荷里活"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2020788,
+          22.3406407
+        ]
+      },
+      "id": "node/3906338107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906338108",
+        "addr:housenumber": "1",
+        "addr:street": "展貿徑 Trademart Drive",
+        "amenity": "cinema",
+        "level": "0",
+        "name": "星影匯 The Metroplex",
+        "name:en": "The Metroplex",
+        "name:zh": "星影匯",
+        "website": "https://www.metroplex.com.hk/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2039152,
+          22.3239531
+        ]
+      },
+      "id": "node/3906338108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906338109",
+        "amenity": "cinema",
+        "name": "UA MEGABOX 戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2081872,
+          22.3198159
+        ]
+      },
+      "id": "node/3906338109"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906338111",
+        "amenity": "cinema",
+        "name": "PALACE apm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2253566,
+          22.3123341
+        ]
+      },
+      "id": "node/3906338111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906338112",
+        "addr:city": "將軍澳 Tseung Kwan O",
+        "addr:housenumber": "9",
+        "addr:street": "唐賢街 Tong Yin Street",
+        "amenity": "cinema",
+        "name": "MCL Star Cinema",
+        "payment:american_express": "yes",
+        "payment:mastercard": "yes",
+        "payment:octopus": "yes",
+        "payment:visa": "yes",
+        "phone": "+852 27069800",
+        "screen": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2605107,
+          22.3084132
+        ]
+      },
+      "id": "node/3906338112"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906338113",
+        "amenity": "cinema",
+        "name": "UA時代廣場戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1818252,
+          22.2784212
+        ]
+      },
+      "id": "node/3906338113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906386531",
+        "amenity": "cinema"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1079614,
+          22.3591203
+        ]
+      },
+      "id": "node/3906386531"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906386533",
+        "amenity": "cinema",
+        "level": "2",
+        "name": "馬鞍山戲院 Ma On Shan Classics Cinema",
+        "name:en": "Ma On Shan Classics Cinema",
+        "name:zh": "馬鞍山戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.230895,
+          22.4241822
+        ]
+      },
+      "id": "node/3906386533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906386535",
+        "amenity": "cinema",
+        "name": "凱都戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.9754725,
+          22.3987475
+        ]
+      },
+      "id": "node/3906386535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906386536",
+        "amenity": "cinema",
+        "name": "巴黎倫敦紐約米蘭戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.9747737,
+          22.3982189
+        ]
+      },
+      "id": "node/3906386536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906386537",
+        "amenity": "cinema",
+        "name": "stagE戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.9765144,
+          22.3934846
+        ]
+      },
+      "id": "node/3906386537"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3906386538",
+        "amenity": "cinema",
+        "name": "賽馬會影院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.9771393,
+          22.3945286
+        ]
+      },
+      "id": "node/3906386538"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4082865127",
+        "amenity": "cinema",
+        "level": "0",
+        "name": "Cinema City Langham Place",
+        "website": "https://www.cinemacity.com.hk/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1687705,
+          22.3176099
+        ]
+      },
+      "id": "node/4082865127"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4168502691",
+        "amenity": "cinema",
+        "name": "AMC Ticketing machine "
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1645573,
+          22.2779273
+        ]
+      },
+      "id": "node/4168502691"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4606127615",
+        "amenity": "cinema",
+        "name": "MCL海怡戲院 MCL South Horizons Cinema",
+        "name:en": "MCL South Horizons Cinema",
+        "name:zh": "MCL海怡戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1479956,
+          22.2430637
+        ]
+      },
+      "id": "node/4606127615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4856224395",
+        "amenity": "cinema",
+        "barrier": "gate",
+        "name": "UA 淘大"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2152163,
+          22.3251484
+        ]
+      },
+      "id": "node/4856224395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5156354022",
+        "addr:housename": "逸峯廣場 Green Code Plaza",
+        "addr:housenumber": "1",
+        "addr:street": "馬適路 Ma Sik Road",
+        "addr:unit": "G12",
+        "amenity": "cinema",
+        "level": "0",
+        "name": "MCL 粉嶺戲院 － 逸峯廣場 MCL Green Code Cinema – Fanling",
+        "name:en": "MCL Green Code Cinema – Fanling",
+        "name:zh": "MCL 粉嶺戲院 － 逸峯廣場",
+        "phone": "+852 2579 0733",
+        "website": "http://www.mclcinema.com/MCLCinema.aspx?visLang=1&ci=013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1459272,
+          22.5008348
+        ]
+      },
+      "id": "node/5156354022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5156756521",
+        "addr:housenumber": "18",
+        "addr:street": "粉嶺車站路 Fanling Station Road",
+        "amenity": "cinema",
+        "name": "嘉禾粉嶺 Golden Harvest Fanling",
+        "name:en": "Golden Harvest Cinema Fanling",
+        "name:zh": "嘉禾粉嶺",
+        "phone": "23308010",
+        "website": "https://www.goldenharvest.com/cinema/schedule?cinema_id=6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13988,
+          22.4916393
+        ]
+      },
+      "id": "node/5156756521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7062854406",
+        "addr:housenumber": "30",
+        "addr:street": "Queen's Road",
+        "amenity": "cinema",
+        "level": "3",
+        "name": "Emperor Cinemas",
+        "website": "https://www.emperorcinemas.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1565172,
+          22.281558
+        ]
+      },
+      "id": "node/7062854406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7258073825",
+        "amenity": "cinema",
+        "branch": "尖沙咀iSQUARE Tsim Sha Tsui iSQUARE",
+        "branch:en": "Tsim Sha Tsui iSQUARE",
+        "branch:zh": "尖沙咀iSQUARE",
+        "brand": "英皇戲院 Emperor Cinemas",
+        "brand:en": "Emperor Cinemas",
+        "brand:wikidata": "Q67934947",
+        "brand:zh": "英皇戲院",
+        "cinema:imax": "yes",
+        "level": "9-15",
+        "level:ref": "7-M3",
+        "name": "英皇戲院 Emperor Cinemas",
+        "name:en": "Emperor Cinemas",
+        "name:zh": "英皇戲院",
+        "operator": "英皇院線有限公司 Emperor Cinemas Circuit Limited",
+        "operator:en": "Emperor Cinemas Circuit Limited",
+        "operator:zh": "英皇院線有限公司",
+        "start_date": "2019",
+        "was:end_date": "2019",
+        "was:name": "UA iSQUARE",
+        "was:name:en": "UA iSQUARE",
+        "was:start_date": "2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1718584,
+          22.2967445
+        ]
+      },
+      "id": "node/7258073825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8664262819",
+        "addr:street": "打磚坪街 Ta Chuen Ping Street",
+        "air_conditioning": "yes",
+        "amenity": "cinema",
+        "email": "cs@lumencinema.com.hk",
+        "name": "Lumen Cinema",
+        "payment:cash": "yes",
+        "phone": "+852 26381826",
+        "website": "https://www.lumencinema.com.hk/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1364044,
+          22.3658265
+        ]
+      },
+      "id": "node/8664262819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9769723551",
+        "amenity": "cinema",
+        "name": "英皇戲院 Emperor Cinemas",
+        "name:en": "Emperor Cinemas",
+        "name:zh": "英皇戲院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.2703934,
+          22.2947536
+        ]
+      },
+      "id": "node/9769723551"
+    }
+  ]
+}
